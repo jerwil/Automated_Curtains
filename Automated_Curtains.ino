@@ -8,8 +8,8 @@ double milis_timer[1] = {0}; // This is used to keep track of the timer used to 
 double second_timer[1] = {0}; // This is used to keep track of the timer used to tick for each second
 unsigned long currentTime;
 
-double open_time = 7; // Time in seconds to open curtains
-double close_time = 7; // Time in seconds to reset string
+double open_time = 9; // Time in seconds to open curtains
+double close_time = 8.2; // Time in seconds to reset string
 
 double motor_timer = 0;
 
@@ -31,6 +31,8 @@ int button2_pushed;
 
 
 int motor_state = 0;
+
+int curtain_state = 0; // Curtain is closed when state is 0, open when 1
 
 char* mode = "idle";
 
@@ -82,8 +84,8 @@ void loop()
   }
   
   else if (mode == "open"){
-    if (tick(250,second_timer) == 1){
-      motor_timer += .25;
+    if (tick(100,milis_timer) == 1){
+      motor_timer += .10;
       Serial.print("Motor timer: ");
       Serial.print(motor_timer);
       Serial.print("/");
@@ -99,8 +101,8 @@ void loop()
     motor_state = 1;
   }
   else if (mode == "close"){
-    if (tick(250,second_timer) == 1){
-      motor_timer += .25;
+    if (tick(100,milis_timer) == 1){
+      motor_timer += .10;
       Serial.print("Motor timer: ");
       Serial.print(motor_timer);
       Serial.print("/");
