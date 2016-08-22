@@ -17,11 +17,11 @@ My alarm clock app, Sleep as Android, has the ability to interface with IFTTT. T
 
 Sleep as Android >>> Adafruit IO
 
-When the alarm goes off, Sleep as Android sends "alarm_alert_start" to a Maker channel feed. Using the Sleep as Android documentation, I created an IFTTT recipe that looks for this message, and writes a "1" to an Adafruit IO feed. When the alarm is disabled, "alarm_alert_dismiss" is sent, and a "0" is written to the data feed.
+When the alarm goes off, Sleep as Android sends "alarm_alert_start" to a Maker channel feed. Using the [Sleep as Android documentation](http://sleep.urbandroid.org/documentation/integration/ifttt/), I created an [IFTTT recipe](https://ifttt.com/recipes/456351-when-my-sleep-as-android-alarm-goes-off-send-data-to-adafruit-io) that looks for this message, and writes a "1" to an Adafruit IO feed. When the alarm is disabled, "alarm_alert_dismiss" is sent, and a "0" is written to the data feed.
 
 Adafruit IO >>> ESP8266
 
-On the hardware side, I have an ESP8266 checking the Adafruit IO feed. I followed the basics of the Adafruit guide to get set up. When the feed returns a "1" the alarm is sounding, and the ESP8266 then lets the Arduino know it's time to open the curtain.
+On the hardware side, I have an ESP8266 checking the Adafruit IO feed. I followed the basics of the [Adafruit guide](https://learn.adafruit.com/esp8266-temperature-slash-humidity-webserver/wiring) to get set up. When the feed returns a "1" the alarm is sounding, and the ESP8266 then lets the Arduino know it's time to open the curtain.
 
 ESP8266 >>> Arduino
 
@@ -37,7 +37,7 @@ The Arduino code also has a timeout (2 hours for now) during which no other alar
 
 ![] (https://github.com/jerwil/Automated_Curtains/raw/master/Media/Breadboard%20Labeled.jpg)
 
-See the included Fritzing diagram (.fzz file) for details.
+See the included Fritzing diagram (.fzz file) for details. Thanks to [ydonnelly](https://github.com/ydonnelly/ESP8266_fritzing) for the ESP8266 Fritzing part!
 
 ![] (https://github.com/jerwil/Automated_Curtains/raw/master/Media/Breadboad.jpg)
 
