@@ -41,6 +41,16 @@ See the included Fritzing diagram (.fzz file) for details. Thanks to [ydonnelly]
 
 ![] (https://github.com/jerwil/Automated_Curtains/raw/master/Media/Breadboad.jpg)
 
+## Hardware
+
+![] (https://github.com/jerwil/Automated_Curtains/raw/master/Media/Servo%20Mounted.jpg)
+
+The servo is mounted on the curtain rod, and has an old plastic wheel as a spool. As the servo turns, the spool reels in the string. The string is attached to the end of the curtain, so as it is pulled onto the spool, the curtain is dragged open.
+
+![] (https://github.com/jerwil/Automated_Curtains/raw/master/Media/Progress%20Photos/Servo%20Washers.jpg)
+
+The string has a bunch of washers along it such that there is tension when it unspools. The software will automatically unspool the string a few seconds after the curtain is dragged in so that the curtain can be later closed.
+
 ## Links
 
 [Youtube video](https://www.youtube.com/watch?v=KcBI1g3s2vk)
